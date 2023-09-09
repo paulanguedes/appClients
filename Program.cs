@@ -25,11 +25,13 @@ class Program
         Console.WriteLine("4 - Delete client");
         Console.WriteLine("5 - Exit");
         Console.WriteLine("==========================");
+
+        ChooseOption();
     }
 
     static void ChooseOption()
     {
-        Console.WriteLine("Choose an option: ");
+        Console.WriteLine("Type an option and press Enter: ");
         var option = int.Parse(Console.ReadLine());
 
         switch (option)
@@ -67,6 +69,7 @@ class Program
             {
                 Console.Clear();
                 Console.WriteLine("Invalid option!");
+                Console.WriteLine("Press Enter to go back to the Menu");
                 break;
             }
         }

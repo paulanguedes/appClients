@@ -14,7 +14,6 @@ public class ClientRepository
         Console.WriteLine("Discount     : " + client.Discount);
         Console.WriteLine("Birth        : " + client.Birth);
         Console.WriteLine("Registered in: " + client.RegisteredIn);
-        Console.WriteLine("-------------------------------------");
     }
 
     public void ShowClients()
@@ -23,7 +22,11 @@ public class ClientRepository
         foreach (var client in clients)
         {
             PrintClient(client);
+            Console.WriteLine("-------------------------------------");
         }
+
+        Console.WriteLine("-------------------------------------");
+        Console.WriteLine("*** Press any key to go back to the Menu ***");
         Console.ReadKey();
     }
 
@@ -35,11 +38,11 @@ public class ClientRepository
         var name = Console.ReadLine();
         Console.Write(Environment.NewLine);
 
-        Console.Write("Birth: ");
+        Console.Write("Birth (dd/mm/yyyy): ");
         var birth = DateOnly.Parse(Console.ReadLine());
         Console.Write(Environment.NewLine);
 
-        Console.Write("Discount: ");
+        Console.Write("Discount (only numbers): ");
         var discount = decimal.Parse(Console.ReadLine());
         Console.Write(Environment.NewLine);
 
@@ -55,8 +58,11 @@ public class ClientRepository
         clients.Add(client);
 
         Console.WriteLine("Client registered! =D ");
-        Console.WriteLine("-----------------------");
+        Console.WriteLine("-------------------------------------");
         PrintClient(client);
+
+        Console.WriteLine("-------------------------------------");
+        Console.WriteLine("*** Press any key to go back to the Menu ***");
         Console.ReadKey();
     }
 
@@ -73,6 +79,8 @@ public class ClientRepository
         if (client == null)
         {
             Console.WriteLine("Client not found =/ ");
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("*** Press any key to go back to the Menu ***");
             Console.ReadKey();
             return;
         }
@@ -96,8 +104,11 @@ public class ClientRepository
         client.Discount = discount;
         
         Console.WriteLine("Client updated! =) ");
-        Console.WriteLine("-----------------------");
+        Console.WriteLine("-------------------------------------");
         PrintClient(client);
+
+        Console.WriteLine("-------------------------------------");
+        Console.WriteLine("*** Press any key to go back to the Menu ***");
         Console.ReadKey();
     }
 
@@ -114,30 +125,31 @@ public class ClientRepository
         if (client == null)
         {
             Console.WriteLine("Client not found =/ ");
+            Console.WriteLine("-------------------------------------");
+            Console.WriteLine("*** Press any key to go back to the Menu ***");
             Console.ReadKey();
             return;
         }
 
         PrintClient(client);
 
-        Console.WriteLine("-----------------------");
-        Console.WriteLine("Are you sure you want to delete this client? (y/n) ");
+        Console.WriteLine("-------------------------------------");
+        Console.WriteLine("Are you sure you want to delete this client? ");
+        Console.WriteLine("Please insert Y for yes ou N for no");
         var answer = Console.ReadLine().ToLower();
+        Console.WriteLine("-------------------------------------");
 
         if (answer == "y") {
             clients.Remove(client);
-            Console.WriteLine("-----------------------");
             Console.WriteLine("Client deleted! =( ");
         } else if (answer == "n") {
-            Console.WriteLine("-----------------------");
             Console.WriteLine("Ok! Please type any key to exit. ");
         } else {
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("Please insert Y for yes ou N for no");
-            Console.WriteLine("Are you sure you want to delete this client? (y/n) ");
-            answer = Console.ReadLine();
+            Console.WriteLine("Invalid option!");
         }
         
+        Console.WriteLine("-------------------------------------");
+        Console.WriteLine("*** Press any key to go back to the Menu ***");
         Console.ReadKey();
     }
 
