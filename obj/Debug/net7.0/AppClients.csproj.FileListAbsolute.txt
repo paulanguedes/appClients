@@ -1,0 +1,14 @@
+C:\Users\paula\AppClients\bin\Debug\net7.0\AppClients.exe
+C:\Users\paula\AppClients\bin\Debug\net7.0\AppClients.deps.json
+C:\Users\paula\AppClients\bin\Debug\net7.0\AppClients.runtimeconfig.json
+C:\Users\paula\AppClients\bin\Debug\net7.0\AppClients.dll
+C:\Users\paula\AppClients\bin\Debug\net7.0\AppClients.pdb
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.AssemblyInfoInputs.cache
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.AssemblyInfo.cs
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.csproj.CoreCompileInputs.cache
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.dll
+C:\Users\paula\AppClients\obj\Debug\net7.0\refint\AppClients.dll
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.pdb
+C:\Users\paula\AppClients\obj\Debug\net7.0\AppClients.genruntimeconfig.cache
+C:\Users\paula\AppClients\obj\Debug\net7.0\ref\AppClients.dll
