@@ -7,6 +7,22 @@ public class ClientRepository
 {
     public List<Client> clients = new List<Client>();
 
+    public void SaveClientsData()
+    {
+        var json = System.Text.Json.JsonSerializer.Serialize(clients);
+        File.WriteAllText("clients.txt", json);
+    }
+
+    public void ReadClientsData()
+    {
+        if (File.Exists("clients.txt"))
+        {
+            var data = File.ReadAllText("clients.txt");
+            var listClients = System.Text.Json.JsonSerializer.Deserialize<List<Client>>(data);
+            clients.AddRange(listClients);
+        }
+    }
+
     public void PrintClient(Client client)
     {
         Console.WriteLine("Id           : " + client.Id);
